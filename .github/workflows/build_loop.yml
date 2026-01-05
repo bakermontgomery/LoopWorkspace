@@ -222,7 +222,6 @@ jobs:
           lnl_icon \
           watch_title \
           2hlollipop \ 
-          basal_lock \
           negative_insulin \
           remote_window
 
