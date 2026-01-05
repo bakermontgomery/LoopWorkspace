@@ -221,9 +221,7 @@ jobs:
           now_line \
           lnl_icon \
           watch_title \
-          2hlollipop \ 
-          remote_window
-
+          2hlollipop 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
           
