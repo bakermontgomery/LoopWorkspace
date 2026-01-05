@@ -222,7 +222,6 @@ jobs:
           lnl_icon \
           watch_title \
           2hlollipop \ 
-          negative_insulin \
           remote_window
 
           # the final customization listed above CANNOT have a continuation character
