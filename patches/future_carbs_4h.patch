@@ -1,8 +1,9 @@
 diff --git a/Loop/Loop/Models/LoopConstants.swift b/Loop/Loop/Models/LoopConstants.swift
 --- a/Loop/Loop/Models/LoopConstants.swift
 +++ b/Loop/Loop/Models/LoopConstants.swift
-@@ -27,3 +27,3 @@ enum LoopConstants {
- static let maxCarbEntryPastTime = TimeInterval(hours: (-12))
-- static let maxCarbEntryFutureTime = TimeInterval(hours: 1)
-+ static let maxCarbEntryFutureTime = TimeInterval(hours: 4)
- static let maxOverrideDurationTime = TimeInterval(hours: 24)
+@@ -27,4 +27,4 @@ enum LoopConstants {
+     static let maxCarbEntryPastTime = TimeInterval(hours: (-12))
+-    static let maxCarbEntryFutureTime = TimeInterval(hours: 1)
++    static let maxCarbEntryFutureTime = TimeInterval(hours: 4)
+
+     static let maxOverrideDurationTime = TimeInterval(hours: 24)
