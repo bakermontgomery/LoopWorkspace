@@ -78,7 +78,7 @@ index cabca1e6..8cc5714a 100644
 -    func deliverBolus(amountInUnits: Double) async throws {
 -        try await enactBolus(units: amountInUnits, activationType: .manualNoRecommendation)
 +    func deliverBolus(amountInUnits: Double, userCreatedDate: Date) async throws -> DoseEntry {
-+        let minTreatmentIntervalInMinutes = 10.0
++        let minTreatmentIntervalInMinutes = 0.0
 +        let boluses = try await doseStore.getBoluses(start: Date().addingTimeInterval(-.days(1)))
 +        // Look back further for safety in case caregiver didn't know about other treatments before they send this (i.e. Upload delays)
 +        let conflictStartDate = userCreatedDate.addingTimeInterval(-.minutes(minTreatmentIntervalInMinutes))
@@ -177,7 +177,7 @@ index 8f497568..974122ce 100644
 -
 +        
 +        let maxAllowedConflictingAmountInGrams = 0.0 // Not allowing any carbs
-+        let minTreatmentIntervalInMinutes = 10.0
++        let minTreatmentIntervalInMinutes = 0.0
 +        let entries = try await carbStore.getCarbEntries(start: Date().addingTimeInterval(-.days(1)), end: Date().addingTimeInterval(.days(1)))
 +        let conflictStartDate = userCreatedDate.addingTimeInterval(-.minutes(minTreatmentIntervalInMinutes)) // Look back a little further for added safety (i.e. Network delays)
 +        let conflictingEntries = entries.filter({ entry in
